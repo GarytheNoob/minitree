@@ -2,6 +2,7 @@
 #include <stddef.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
 #include <string.h>
 #include <sys/stat.h>
 #include <limits.h>
@@ -51,7 +52,7 @@ size_t read_dir(const char *path, entry *entries, size_t max) {
 
         if (lstat(fullpath, &st) != 0) continue;
 
-        strlcpy(entries[count].name, name, sizeof(entries[count].name));
+        snprintf(entries[count].name, sizeof(entries[count].name), "%s", name);
         entries[count].is_dir = S_ISDIR(st.st_mode);
 
         count ++;
