@@ -1,13 +1,13 @@
-# minitree
+# sapling
 
-A `tree` vibe-planted for fun.
+Early stage of minitree.
 
-Not a product.
+BUGGY and INCOMPLETE.
 
 ## Build
 
 ```bash
-cc -Wall minitree.c -o minitree
+cc -Wall sapling.c -o sapling
 ```
 
 ## License
